@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>THI CUỐI KÌ</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+    <script src="../js/cuoiky.js"></script>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<script>
+    function chonKhuVuc() {
+            var kv = document.getElementById("txtKhuVuc").value;
+            var vt = kv.indexOf(";");
+            var khuVuc = kv.substring(0, vt);
+            var giamGia = kv.substring(vt + 1, kv.length);
+            //var x = kv.substring(kv.length-3, kv.length);
+            //x = Number(x);
+            document.getElementById("txtGiamGia").value = giamGia;
+            
+        }
+</script>
+<body>
+	<div class="container">
+    	<div class="row">
+        	<div class="col-md-12">
+            	<img src="../images/1.jpg" width="100%">
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="col-md-12">
+            	<nav class="nav-collapse">
+                	<ul class="nav navbar-nav">
+                    	<li><a href="#">Trang chủ</a></li>
+                        <li><a href="#" id="myBtn">Đặt vé</a></li> 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="col-md-12">
+            	<section class="table-responsive">
+                	<table class="table table-bordered table-hover">
+                    	<tr>
+                        	<th>STT</th>
+                            <th>Họ tên khách hàng</th>
+                            <th>Ngày đi</th>
+                            <th>Số điện thoại</th>
+                            <th>Phụ thu hành lý</th>
+                            <th>Hình thức thanh toán</th>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="col-md-12">
+            	<footer class="bg-danger modal-footer">	
+                	<p class="text-danger text-center">abbbbb</p>
+               </footer>
+            </div> 
+        </div>
+    </div>
+    <!-- Modal -->
+    
+    <div class="modal fade" id="myModal" role="dialog">
+    	<div class="modal-dialog">
+        <div class="modal-content">
+        	<!-- Header -->
+            <div class="modal-header">
+            	<button type="button" class="close" data-dismiss="modal">&times;</button>
+                <p>Đặt vé online</p>
+            </div>
+            <!-- Body -->
+            <div class="modal-body">
+            	<form role="form" class="form-horizontal">
+                	<div class="form-group">
+                    	<div id="thongbao" class="text-danger"></div>
+                    </div>
+                    <!--họ tên khách hàng-->
+                    <div class="form-group">
+                    	<label for="txtTen" class="control-label col-xs-3">Họ tên khách hàng</label>
+                        <div class="col-md-9">
+                        	<input type="txtTen" class="form-control" id="txtTen" placeholder="Ho ten" onblur="kiemTraTen()">
+                            <span id="tbTen">(*)</span>
+                        </div>
+                    </div>
+
+                     <!--Ngày đi-->
+                     <div class="form-group">
+                    	<label for="txtNgay" class="control-label col-xs-3">Ngày đi</label>
+                        <div class="col-md-9">
+                        	<input type="date" class="form-control" id="txtNgay" placeholder="mm/dd/yyyy">
+                            <span id="tbNgay">(*)</span>
+                        </div>
+                    </div>
+                    
+                     <!--Số dien thoại-->
+                     
+                     <div class="form-group">
+                     	<label for="txtSDT" class="control-label col-xs-3">Số điện thoại</label>
+                        <div class="col-md-9">
+                        	<input type="txtSDT" class="form-control" id="txtSDT" placeholder="So dien thoai" onblur="kiemSDT()">
+                            <span id="tbSDT">(*)</span>
+                        </div>
+                     </div>
+                    <!--Ảnh đại diện-->
+                    
+                    <div class="form-group">
+                    	<label for="txtKyGui" class="control-label col-xs-3">Hành lý Ký gửi </label>
+                        <div class="col-md-9">
+                            <select class="form-control" id="txtKhuVuc" onchange="chonKhuVuc()">
+                            <option value="15kg;210000">15kg</option>
+                            <option value="25kg;250000">25kg</option>
+                            <option value="35kg;300000">300kg</option>
+                        </select>
+                        </div>
+                    </div>  
+                      <!--Phụ  thu hành lý-->
+                      <div class="form-group">
+                            <label for="txtPhuThu" class="control-label col-xs-3">Phụ thu hành lý </label>
+                            <div class="col-md-9">
+                                    <input type="text" id="txtGiamGia" class="form-control" readonly>   
+                             </div>
+                    </div>
+                     <!--thanh toán-->
+                    <div class="form-group">
+                    	<label for="txtKyGui" class="control-label col-xs-3">Hình thức thanh toán </label>
+                        <div class="col-md-9">
+                         <input type="radio" name="ThanhToan" value="Chuyên khoan" name="thanhToan">Chuyen khoan
+                         <input type="radio" name="ThanhToan" value="Tien mat" name="thanhToan">Tien mat
+                        </div>
+                    </div>  
+
+                    <button type="button" id="btnSave" class="btn btn-info">Đặt  vé</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

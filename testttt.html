@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/cuoiky.js"></script>
+    <script>
+        $(document).ready(function (e){
+            var i=1;
+            $("#myBtn").click(function(){
+                $("#myModal").modal();
+            });
+
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="../images/1.jpg" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="nav-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">Đăng Nhập</a>
+                        </li>
+                        <li>
+                            <a href="" id="myBtn">Đăng Kí</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <section class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <tr>
+                            <th>STT</th>
+                            <th>Họ tên</th>
+                            <th>Ngày</th>
+                            <th>SDT</th>
+                            <th>Phí</th>
+                            <th>Hình thức thanh toán</th>
+                        
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <footer class="bg-danger modal-footer">
+                    <p class="text-danger text-center">Nguyễn Minh Tâm</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Header -->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dissmiss="modal">&times;</button>
+                    <p>Đăng kí</p>
+                </div>
+
+                <!-- Body -->
+                <div class="modal-body">
+                    <form role="form" class="form-horizontal">
+                        <div class="form-group">
+                            <div id="thongbao" class="text-danger"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtTen" class="control-label col-xs-3"></label>
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                        <div class="form-group"></div>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
